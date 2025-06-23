@@ -1,0 +1,21 @@
+{
+    // created by vscode papyrus-lang papyrus.skyrimSpecialEdition.generateProject
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "name": "Vanilla Scripts",
+			"path": "@Skyrim64PathConverted@/Data/@SCRIPT_FOLDER@"
+		},
+        {
+			"path": "@Skyrim64PathConverted@/Logs"
+		}@NOTES_JSON@
+    ],
+    "settings": {
+        "papyrus.skyrimSpecialEdition.enabled": true,
+        "papyrus.fallout4.enabled": false,
+        "papyrus.skyrim.enabled": false,
+        "papyrus.skyrimSpecialEdition.installPath": "@Skyrim64PathConverted@"
+    }
+}

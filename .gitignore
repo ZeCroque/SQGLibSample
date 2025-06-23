@@ -1,1 +1,13 @@
 build/
+*.ignore.*
+*.ignore
+*.pex
+SSEEdit Backups
+SSEEdit Cache
+meta.ini
+Release
+*.dll
+*.lib
+*.pdb
+*.code-workspace
+*.ppj

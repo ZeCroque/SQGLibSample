@@ -4,6 +4,10 @@
   "dependencies": [
     "boost-stl-interfaces",
     "rsm-binary-io",
-    "spdlog"
+    "spdlog",
+    "xbyak",
+    "boost-property-tree",
+    "fmt",
+    "pugixml"
   ]
 }
