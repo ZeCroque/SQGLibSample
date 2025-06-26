@@ -11,9 +11,7 @@ Event OnActivate(ObjectReference akActionRef)
 		ObjectReference target = Game.GetPlayer().PlaceAtMe(SQGTestTargetNPC, 1, true)
 		Debug.MessageBox(GenerateQuest(target))
 	ElseIf (result == 1) 
-		Debug.MessageBox(SwapSelectedQuest())
-	ElseIf (result == 2) 
-		StartSelectedQuest()
+		PrintGeneratedQuests()
 	Else
 		DraftDebugFunction()
 	EndIf 
