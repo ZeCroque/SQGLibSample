@@ -387,7 +387,13 @@ extern "C" DLLEXPORT bool SKSEAPI SKSEPlugin_Load(const SKSE::LoadInterface* inL
 					generatedQuests.clear();
 					targets.clear();
 
-					generatedQuestIndex = SQG::DataManager::GetSingleton()->questsData.size();
+					auto* dataManager = SQG::DataManager::GetSingleton();
+					generatedQuestIndex = dataManager->questsData.size();
+					for(auto& questData : dataManager->questsData | std::views::values)
+					{
+						generatedQuests.push_back(questData.quest);
+						targets.push_back(reinterpret_cast<RE::BGSRefAlias*>(questData.quest->aliases[0])->GetReference());
+					}
 				}
 			})
 		)
