@@ -31,6 +31,9 @@ else()
 	set(SCRIPT_FOLDER "Source/Scripts")
 endif()
 
+set(LOG_FOLDER "$ENV{homedrive}$ENV{homepath}/Documents/My Games/Skyrim Special Edition/Logs")
+cmake_path(CONVERT ${LOG_FOLDER} TO_CMAKE_PATH_LIST LOG_FOLDER)
+
 option(NOTES_FOLDER_PATH "If you version notes/TODOs etc.. outside git and want to have them appear in VSC, you can specify this path")
 if(NOT ${NOTES_FOLDER_PATH} STREQUAL "OFF")
 	set(NOTES_JSON ",\n\t\t{\n\t\t\t\"name\": \"Notes\",\n\t\t\t\"path\": \"${NOTES_FOLDER_PATH}\"\n\t\t}")
@@ -45,6 +48,12 @@ configure_file(
 configure_file(
 	"${CMAKE_CURRENT_SOURCE_DIR}/cmake/Template.ppj.in" 
 	"${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}.ppj"
+	@ONLY
+)
+
+configure_file(
+	"${CMAKE_CURRENT_SOURCE_DIR}/cmake/tasks.json.in" 
+	"${CMAKE_CURRENT_SOURCE_DIR}/.vscode/tasks.json"
 	@ONLY
 )
 

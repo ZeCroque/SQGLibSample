@@ -11,3 +11,4 @@ Release
 *.pdb
 *.code-workspace
 *.ppj
+.vscode/tasks.json
