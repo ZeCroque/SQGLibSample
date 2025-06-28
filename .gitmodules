@@ -4,4 +4,4 @@
 [submodule "external/SQGLib"]
 	path = external/SQGLib
 	url = https://github.com/ZeCroque/SQGLib.git
-	branch = master
+	branch = AESupport
