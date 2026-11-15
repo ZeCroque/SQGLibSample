@@ -9,6 +9,3 @@ Release
 *.dll
 *.lib
 *.pdb
-*.code-workspace
-*.ppj
-.vscode/tasks.json

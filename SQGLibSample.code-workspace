@@ -1,0 +1,23 @@
+{
+    // created by vscode papyrus-lang papyrus.skyrimSpecialEdition.generateProject
+    "folders": [        
+        {
+			"path": "H:/Games/steamapps/common/Skyrim Special Edition/Data/Source/Scripts"
+		},
+        {
+            "path": "."
+        },
+        {
+			"path": "C:/Users/ZeCroque/Documents/My Games/Skyrim Special Edition/Logs"
+		},
+        {
+			"path": "C:/Users/ZeCroque/Nextcloud/Workspace/Skyrim/SQGLib"
+		}
+    ],
+    "settings": {
+        "papyrus.skyrimSpecialEdition.enabled": true,
+        "papyrus.fallout4.enabled": false,
+        "papyrus.skyrim.enabled": false,
+        "papyrus.skyrimSpecialEdition.installPath": "H:/Games/steamapps/common/Skyrim Special Edition"
+    }
+}
