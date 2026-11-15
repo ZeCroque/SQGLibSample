@@ -91,5 +91,27 @@
       "toolset": "v143"
     }
   ],
+  "buildPresets": [
+    {
+      "name": "Release-SE",
+      "configurePreset": "vs2022-windows",
+      "configuration": "Release"
+    },
+    {
+      "name": "Debug-SE",
+      "configurePreset": "vs2022-windows",
+      "configuration": "Debug"
+    },
+    {
+      "name": "Release-AE",
+      "configurePreset": "vs2022-windows-AE",
+      "configuration": "Release"
+    },
+    {
+      "name": "Debug-AE",
+      "configurePreset": "vs2022-windows-AE",
+      "configuration": "Debug"
+    }
+  ],
   "version": 3
 }

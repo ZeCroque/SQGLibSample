@@ -171,6 +171,20 @@ namespace
 			SQG::AddAliasPackage(inQuest, inTarget, customTravelPackage, "PF_SQGTravelPackage" + questIndex);
 		}
 
+		{
+			std::unordered_map<std::string, SQG::PackageData> packageDataMap;
+			packageDataMap["Place to Travel"] = SQG::PackageData(RE::PackageLocation::Type::kNearReference, { .refHandle = targetActivator->CreateRefHandle() }, 0);
+			auto* customTravelPackage = SQG::CreatePackageFromTemplate
+			(
+				dataManager->travelPackage,
+				inQuest,
+				packageDataMap,
+				{ SQG::CreateCondition(inQuest, RE::FUNCTION_DATA::FunctionID::kGetStage, RE::CONDITION_ITEM_DATA::OpCode::kEqualTo, {.f = 32.f}) }
+			);
+
+			SQG::AddAliasPackage(inQuest, inTarget, customTravelPackage);
+		}
+
 		//Add dialogs
 		//===========================
 
